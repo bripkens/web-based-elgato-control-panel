@@ -1,7 +1,7 @@
 {
   "name": "web-based-elgato-control-panel",
   "version": "1.0.0",
-  "description": "Web hosted control panel for the Elgato lighting products that does not rely on MDNS",
+  "description": "Web hosted control panel for the Elgato lighting products that does not rely on mDNS",
   "main": "src/index.js",
   "scripts": {
     "dev": "nodemon -e js,html,css -r dotenv/config ."

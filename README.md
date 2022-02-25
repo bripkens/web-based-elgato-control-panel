@@ -62,23 +62,22 @@ npm run dev
 
 ```sh
 docker build \
-  -t app \
+  -t ecp \
   .
 ```
 
 #### Running the Docker Container
 
 ```sh
-
 docker run \
-  --env 'LIGHTS=[{"name": "left", "ip": "192.168.20.20", "port": 9123}]' \
-  --rm \
+  --env 'LIGHTS=[{"name": "left", "ip": "192.168.20.20", "port": 9123},{"name": "right", "ip": "192.168.20.21", "port": 9123}]' \
   --name ecp \
   --init \
   --publish 8080:8080 \
   --memory "100M" \
   --memory-swap "100M" \
-  app
+  --restart always \
+  ecp
 ```
 
 ## Leveraged Techniques
